@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+   int A, B, C;
+    scanf("%d %d %d", &A, &B, &C);
+
+    int max;
+
+    if (A >= B && A >= C)
+        max = A;
+    else if (B >= A && B >= C)
+        max = B;
+    else
+        max = C;
+
+    printf("%d\n", max);    
+    return 0;
+}

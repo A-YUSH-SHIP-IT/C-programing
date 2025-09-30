@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int P, T;
+    float R;
+    scanf("%d", &P);
+    scanf("%f", &R);
+    scanf("%d", &T);
+    float amount = P * pow((1 + R / 100), T);
+    float CI = amount - P;
+    printf("%.2f\n", CI);
+    return 0;
+}

@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+#include <stdio.h>
+
+int main() {
+    int N;
+    long long factorial = 1;
+
+    // Read input
+    scanf("%d", &N);
+
+    // Calculate factorial
+    for (int i = 1; i <= N; i++) {
+        factorial *= i;
+    }
+
+    // Print the result
+    printf("%lld\n", factorial);
+
+    return 0;
+}

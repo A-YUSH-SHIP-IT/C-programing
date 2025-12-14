@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    int A[N], B[N];
+
+    
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &A[i]);
+    }
+
+    
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &B[i]);
+    }
+
+    
+    int *pA = A;
+    int *pB = B;
+
+    
+    for (int i = 0; i < N; i++) {
+        int temp = *(pA + i);
+        *(pA + i) = *(pB + i);
+        *(pB + i) = temp;
+    }
+
+    
+    for (int i = 0; i < N; i++) {
+        printf("%d", *(pA + i));
+        if (i < N - 1) printf(" ");
+    }
+    printf("\n");
+
+    
+    for (int i = 0; i < N; i++) {
+        printf("%d", *(pB + i));
+        if (i < N - 1) printf(" ");
+    }
+    printf("\n");
+
+    return 0;
+}
